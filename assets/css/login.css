@@ -462,26 +462,80 @@ tbody td {
   display: none !important;
 }
 
+.form-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 16px 8px;
+
+  img {
+    max-width: 140px;
+    height: auto;
+  }
+}
+
+.back-home {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  z-index: 1100;
+  baackground: rgba(255, 255, 255, 0.95);
+  border-radius: 999px;
+  padding: 8px;
+  box-shadow: var(--shadow);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+
+  svg {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.back-home:hover {
+  transform: translateY(-1px);
+}
+
 /* Responsividade */
-@media (min-width: 300px) and (max-width: 428px) {
+
+/* Smartphones: 201px – 500px */
+@media (min-width: 201px) and (max-width: 500px) {
+  .header-container {
+    grid-template-columns: auto auto;
+    padding: 10px 16px;
+  }
+
   .header-subtitle {
     display: none;
   }
+
   .container {
     width: 95%;
     margin: 8px auto;
   }
+
   .content {
     padding: 16px;
+    max-height: none; /* deixa a página rolar normalmente no mobile */
   }
+
   .form-row,
   .tier-selector,
   .dashboard {
     grid-template-columns: 1fr;
   }
+
+  /* Tabela vira cards empilhados no mobile */
+  .table-container {
+    box-shadow: none;
+  }
+
   table thead {
     display: none;
   }
+
   table,
   tbody,
   tr,
@@ -489,11 +543,13 @@ tbody td {
     display: block;
     width: 100%;
   }
+
   tr {
     margin-bottom: 10px;
     border: 1px solid #eee;
     border-radius: 8px;
   }
+
   td {
     border: none;
     border-bottom: 1px solid #f1f1f1;
@@ -501,6 +557,7 @@ tbody td {
     padding-left: 42%;
     min-height: 40px;
   }
+
   td::before {
     content: attr(data-label);
     position: absolute;
@@ -513,30 +570,65 @@ tbody td {
   }
 }
 
-@media (min-width: 429px) and (max-width: 800px) {
+/* Tablets: 501px – 900px */
+@media (min-width: 501px) and (max-width: 900px) {
+  .header-container {
+    padding: 10px 20px;
+  }
+
+  .container {
+    width: 94%;
+  }
+
   .content {
     padding: 20px;
+    max-height: none;
   }
+
   .form-row {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
   .tier-selector {
     grid-template-columns: repeat(2, minmax(180px, 1fr));
   }
+
   .dashboard {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-@media (min-width: 801px) and (max-width: 1027px) {
+/* Laptops / Notebooks: 901px – 1500px */
+@media (min-width: 901px) and (max-width: 1500px) {
+  .container {
+    width: 92%;
+  }
+
   .content {
     padding: 24px;
   }
+
   .form-row,
   .dashboard {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
   .tier-selector {
     grid-template-columns: repeat(3, minmax(180px, 1fr));
+  }
+}
+
+/* Desktops: 1501px – 1800px */
+@media (min-width: 1501px) and (max-width: 1800px) {
+  .container {
+    width: 88%;
+  }
+}
+
+/* Telas amplas: 1801px+ */
+@media (min-width: 1801px) {
+  .container {
+    max-width: 1400px;
+    width: 80%;
   }
 }

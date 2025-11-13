@@ -158,16 +158,22 @@
 
   function open(){
     modal.classList.add('open');
-    modal.setAttribute('aria-hidden','false');
+    modal.setAttribute('aria-hidden','false');  
+    document.body.style.overflow = 'hidden';
+
     resetFeedback();
     currentProfile = null;
     currentDonation = null;
     // volta para o primeiro passo
-    show(stepProfile); hide(stepDonorType); hide(stepDonorForm); hide(stepInstForm);
+    show(stepProfile);
+    hide(stepDonorType);
+    hide(stepDonorForm);
+    hide(stepInstForm);
   }
   function close(){
     modal.classList.remove('open');
     modal.setAttribute('aria-hidden','true');
+    document.body.style.overflow = '';
   }
 
   // Abertura/fechamento
