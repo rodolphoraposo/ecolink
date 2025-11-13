@@ -380,11 +380,19 @@ body {
 }
 
 /* ======= KPIs ======= */
+.kpis-intro {
+  margin-top: 4px;
+  margin-bottom: 14px;
+  max-width: 60ch;
+  font-size: 0.95rem;
+  color: #3b4a3f;
+}
+
 .kpis {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 14px;
-  margin-top: 12px;
+  margin-top: 8px;
 }
 .kpi {
   background: linear-gradient(135deg, var(--light-green), var(--light-blue));
@@ -425,9 +433,15 @@ body {
 .kpi-subtitle {
   font-weight: 700;
   font-size: 0.9rem;
-  opacity: 0.85;
+  opacity: 0.9;
+}
+.kpi-text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-top: 4px;
 }
 .kpi-link {
+  margin-top: 6px;
   color: #0b2a16;
   font-weight: 700;
   font-size: 0.85rem;
