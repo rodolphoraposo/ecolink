@@ -64,24 +64,7 @@ body {
   align-items: center;
 }
 
-.volunteer-btn {
-  background: var(--purple);
-  color: #fff;
-  border: 0;
-  padding: 10px 16px;
-  border-radius: 8px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: 0.25s;
-  display: inline-flex;
-  gap: 8px;
-  align-items: center;
-  box-shadow: var(--shadow);
-}
-.volunteer-btn:hover {
-  transform: translateY(-2px);
-}
-
+/* badge-count usado em notificações */
 .badge-count {
   display: inline-flex;
   align-items: center;

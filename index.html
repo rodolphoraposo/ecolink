@@ -70,21 +70,19 @@
             Juntos, viramos o jogo da economia circular.
           </p>
           <div class="cta-row">
-            <a class="btn btn-primary" href="./assets/html/login.html#register"
-              >Começar agora</a
-            >
             <a class="btn btn-ghost" href="./assets/html/login.html#login"
               >Já tenho conta</a
             >
+            <a class="btn btn-primary" href="./assets/html/login.html#register"
+              >Quero me cadastrar</a
+            >
 
-            <!-- Botão de Doações transferido da tela de login -->
             <button class="btn btn-accent" id="btn-doacoes">
               Doações Voluntárias
             </button>
           </div>
         </section>
 
-        <!-- COMO FUNCIONA -->
         <section
           id="como-funciona"
           class="section"
@@ -178,12 +176,10 @@
           </div>
         </section>
 
-        <!-- KPIs -->
         <section id="indicadores" class="section" data-section="indicadores">
           <h2>Indicadores de Impacto</h2>
 
           <div class="kpis" aria-label="Indicadores do impacto">
-            <!-- CO2 evitado -->
             <article class="kpi">
               <div class="kpi-image-placeholder">
                 <img src="./assets/imgs/co2-icon.jpg" alt="CO₂ evitado" />
@@ -201,7 +197,6 @@
               </div>
             </article>
 
-            <!-- Água poupada -->
             <article class="kpi">
               <div class="kpi-image-placeholder">
                 <img src="./assets/imgs/water-icon.png" alt="Água poupada" />
@@ -219,7 +214,6 @@
               </div>
             </article>
 
-            <!-- Kg reaproveitados -->
             <article class="kpi">
               <div class="kpi-image-placeholder">
                 <img
@@ -240,7 +234,6 @@
               </div>
             </article>
 
-            <!-- Instituições atendidas -->
             <article class="kpi">
               <div class="kpi-image-placeholder">
                 <img
@@ -263,7 +256,6 @@
           </div>
         </section>
 
-        <!-- BENEFÍCIOS -->
         <section
           id="beneficios"
           class="section benefits-wrap"
@@ -356,7 +348,6 @@
           </div>
         </section>
 
-        <!-- PLANOS -->
         <section id="planos" class="section" data-section="planos">
           <h2>Planos</h2>
           <nav class="pricing-tabs" role="tablist" aria-label="Planos">
@@ -571,29 +562,52 @@
         </section>
       </main>
 
-      <!-- FOOTER COM POLÍTICAS E CONTATOS -->
       <footer class="footer">
-        <div class="container footer-grid">
-          <div class="footer-small">
-            <small
-              >©
+        <div class="container footer-grid-new">
+
+          <div class="footer-brand-col">
+            <a href="#inicio" class="brand">
+              <img
+                src="./assets/imgs/logo.png"
+                alt="Logomarca da Ecolink"
+                class="logo"
+              />
+              <span>Ecolink</span>
+            </a>
+            <p class="footer-tagline">
+              Conectando a indústria têxtil a um futuro circular e sustentável.
+            </p>
+            <small class="footer-copyright"
+              >© 2024 Ecolink | Design:
               <a href="https://portfolioraposoofc.vercel.app" target="_blank"
                 >Rapôso Web Dev</a
-              >
-              | Todos os direitos reservados</small
+              ></small
             >
           </div>
 
           <div class="footer-col">
-            <h4>Legal</h4>
+            <h4>Navegação</h4>
             <nav class="footer-links">
-              <a href="#politica-privacidade">Política de Privacidade</a>
-              <a href="#termos-uso">Termos de Uso</a>
+              <a href="#como-funciona">Como funciona?</a>
+              <a href="#indicadores">Indicadores</a>
+              <a href="#beneficios">Benefícios</a>
+              <a href="#planos">Planos</a>
+              <a href="#team">Compromisso</a>
             </nav>
           </div>
 
           <div class="footer-col">
-            <h4>Contato</h4>
+            <h4>Legal & Ajuda</h4>
+            <nav class="footer-links">
+              <a href="#politica-privacidade">Política de Privacidade</a>
+              <a href="#termos-uso">Termos de Uso</a>
+              <a href="#faq">FAQ</a>
+              <a href="#suporte">Suporte</a>
+            </nav>
+          </div>
+
+          <div class="footer-col">
+            <h4>Fale Conosco</h4>
             <ul class="contact-list">
               <li>
                 Telefone: <a href="tel:+5582999999999">(82) 99999-9999</a>
@@ -602,22 +616,70 @@
                 Email:
                 <a href="mailto:contato@ecolink.org">contato@ecolink.org</a>
               </li>
-              <li>
-                Instagram:
-                <a
-                  href="https://instagram.com/ecolink"
-                  target="_blank"
-                  rel="noopener"
-                  >@ecolink</a
-                >
-              </li>
             </ul>
+
+            <div class="social-links">
+              <a
+                href="https://instagram.com/ecolink"
+                target="_blank"
+                rel="noopener"
+                aria-label="Instagram"
+              >
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M16 3H8a5 5 0 00-5 5v8a5 5 0 005 5h8a5 5 0 005-5V8a5 5 0 00-5-5zM12 17a5 5 0 100-10 5 5 0 000 10zM17.5 6.5a1 1 0 11-2 0 1 1 0 012 0z"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://linkedin.com/company/ecolink"
+                target="_blank"
+                rel="noopener"
+                aria-label="LinkedIn"
+              >
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7H8v-7a6 6 0 016-6z"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M5 21V9h4v12H5zM7 6a2 2 0 100-4 2 2 0 000 4z"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://facebook.com/ecolink"
+                target="_blank"
+                rel="noopener"
+                aria-label="Facebook"
+              >
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3V2z"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
       </footer>
     </div>
 
-    <!-- MODAL DE DOAÇÕES VOLUNTÁRIAS (NOVO FLUXO COM CARDS) -->
     <div
       class="donation-modal"
       id="donation-modal"
@@ -632,7 +694,6 @@
           &times;
         </button>
 
-        <!-- PASSO 1: ESCOLHER PERFIL -->
         <section class="modal-section" id="step-profile">
           <h3 id="donation-title">Doações Voluntárias</h3>
           <p>Como você deseja participar?</p>
@@ -658,7 +719,6 @@
           </div>
         </section>
 
-        <!-- PASSO 2 (DOADOR): TIPO DE DOAÇÃO -->
         <section class="modal-section hidden" id="step-donor-type">
           <h3>Qual tipo de doação você quer fazer?</h3>
           <div class="cards-grid modal-cards">
@@ -706,7 +766,6 @@
           </div>
         </section>
 
-        <!-- PASSO 3 (DOADOR): FORMULÁRIO GERAL -->
         <section class="modal-section hidden" id="step-donor-form">
           <h3 id="donor-form-title">Detalhes da doação</h3>
 
@@ -798,7 +857,6 @@
             </div>
           </div>
 
-          <!-- CARTÕES DE OPÇÕES (mantém padrão visual) -->
           <div class="cards-grid modal-cards compact" id="vf-options-cards">
             <article class="card">
               <h4>Tipo de doação</h4>
@@ -808,10 +866,12 @@
             <article class="card" id="vf-money-card" hidden>
               <h4>Valor</h4>
               <div class="donation-amounts inline">
+                <button class="amount" data-amount="5">R$ 5</button>
+                <button class="amount" data-amount="10">R$ 10</button>
                 <button class="amount" data-amount="20">R$ 20</button>
                 <button class="amount" data-amount="50">R$ 50</button>
                 <button class="amount" data-amount="100">R$ 100</button>
-                <button class="amount" data-amount="250">R$ 250</button>
+                <button class="amount" data-amount="200">R$ 200</button>
               </div>
               <label class="donation-input">
                 <span>Outro valor</span>
@@ -834,7 +894,6 @@
             </article>
           </div>
 
-          <!-- DADOS BANCÁRIOS (mostra só para doação em dinheiro) -->
           <div class="form-card bank-card" id="vf-bank" hidden>
             <h4>Dados bancários da Ecolink</h4>
             <ul>
@@ -866,7 +925,6 @@
           ></p>
         </section>
 
-        <!-- PASSO 2 (INSTITUIÇÃO): FORMULÁRIO SIMPLIFICADO -->
         <section class="modal-section hidden" id="step-institution-form">
           <h3>Solicitar apoio</h3>
           <div class="form-card">

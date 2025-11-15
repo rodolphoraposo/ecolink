@@ -620,40 +620,99 @@ body {
   font-style: italic;
 }
 
-/* ======= Footer ======= */
+/* ======= Footer (Novo Estilo) ======= */
 .footer {
   color: #ffffffd0;
-  text-align: center;
-  padding: 28px 0;
+  text-align: left; /* Alinhamento mais profissional */
+  padding: 36px 0 24px;
   margin-top: auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 .footer a {
   color: #fff;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
 }
-.footer-grid {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr 1fr;
-  gap: 18px;
-  align-items: start;
-}
-.footer-col h4 {
-  color: #fff;
-  margin-bottom: 8px;
-  font-size: 1rem;
-}
-.footer-small {
-  margin-top: 30px;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  font-size: 1rem;
+.footer a:hover {
+  opacity: 0.7;
 }
 
+.footer-grid-new { /* Novo nome de classe para o grid */
+  display: grid;
+  grid-template-columns: 1.5fr repeat(3, 1fr); /* 4 colunas: 1.5, 1, 1, 1 */
+  gap: 32px;
+  align-items: start;
+}
+
+/* Colunas de Conteúdo */
+.footer-col h4 {
+  color: #fff;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.footer-links {
+  display: grid;
+  gap: 8px;
+}
+
+/* Coluna de Logo e Copyright */
+.footer-brand-col .brand {
+  margin-bottom: 8px;
+}
+.footer-brand-col .brand .logo {
+  width: 60px; /* Reduz o tamanho da logo no footer */
+  height: 60px;
+}
+.footer-tagline {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  max-width: 30ch;
+  margin-bottom: 16px;
+}
+.footer-copyright {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  display: block;
+}
+
+/* Lista de Contato */
 .contact-list {
   list-style: none;
   display: grid;
-  gap: 4px;
+  gap: 8px;
+  margin-bottom: 16px;
 }
+.contact-list li {
+  font-size: 0.95rem;
+}
+
+/* Ícones de Redes Sociais */
+.social-links {
+  display: flex;
+  gap: 14px;
+  margin-top: 12px;
+}
+.social-links a {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #fff;
+  transition: background 0.2s ease;
+}
+.social-links a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.social-links svg {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+}
+
 
 /* ======= Modal Doações (revisto) ======= */
 .donation-modal {
@@ -753,6 +812,10 @@ body {
 }
 .donation-amounts.inline {
   gap: 6px;
+  .amounts {
+    padding: 15px;
+    border-radius: 10px;
+  }
 }
 .donation-actions {
   display: flex;
@@ -816,11 +879,13 @@ body {
     height: 220px;
   }
 
-  .footer-grid {
+  /* NOVO CSS: Responsividade do Footer */
+  .footer-grid-new {
     grid-template-columns: 1fr;
-    text-align: left;
+    gap: 24px;
+    padding-bottom: 12px;
   }
-
+  
   .two-cols {
     grid-template-columns: 1fr;
   }
@@ -861,8 +926,10 @@ body {
     height: 260px;
   }
 
-  .footer-grid {
+  /* NOVO CSS: Responsividade do Footer */
+  .footer-grid-new {
     grid-template-columns: 1fr 1fr;
+    gap: 32px 18px;
   }
 
   .two-cols {

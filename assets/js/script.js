@@ -40,10 +40,36 @@ function saveToLocalStorage() {
 }
 
 function showScreen(screenId, evt) {
+  // remove visual de todas as telas e abas
   document.querySelectorAll(".screen").forEach((s) => s.classList.remove("active"));
   document.querySelectorAll(".nav-tab").forEach((t) => t.classList.remove("active"));
-  document.getElementById(screenId).classList.add("active");
-  if (evt && evt.currentTarget) evt.currentTarget.classList.add("active");
+
+  // ativa a tela solicitada
+  const screenEl = document.getElementById(screenId);
+  if (screenEl) screenEl.classList.add("active");
+
+  // se tivermos o event do clique (ex.: clicar diretamente na aba), usamos o currentTarget
+  if (evt && evt.currentTarget) {
+    evt.currentTarget.classList.add("active");
+    // atualiza aria-selected se necessário
+    try {
+      document.querySelectorAll(".nav-tab").forEach(t => t.setAttribute('aria-selected', t.classList.contains('active') ? 'true' : 'false'));
+    } catch (e) {}
+  } else {
+    // quando showScreen for chamado programaticamente (ex.: showScreen('register'))
+    // procuramos pela tab correspondente por id (convenção: login -> loginTab, register -> registerTab)
+    const mapping = {
+      login: "loginTab",
+      register: "registerTab"
+      // se existir outra aba com screenId diferente, expanda aqui
+    };
+    const tabId = mapping[screenId] || (screenId + "Tab");
+    const tab = document.getElementById(tabId);
+    if (tab) {
+      tab.classList.add("active");
+      tab.setAttribute('aria-selected', 'true');
+    }
+  }
 }
 
 // Mostrar/ocultar abas de autenticação (corrige o botão Sair e o pós-login)
@@ -392,7 +418,7 @@ function generateReceiptImage({ user, plan, perMeta, totals }) {
     logo.onload = () => draw(logo);
     logo.onerror = () => draw(null);
     // Ajuste o caminho da logo se estiver em outra pasta
-    logo.src = "../imgs/logo.png";
+    logo.src = "./imgs/logo.png";
   });
 }
 
@@ -567,10 +593,8 @@ function logout() {
   showAuthTabs();
   showScreen("login");
   const logoutBtn = document.getElementById("logoutBtn");
-  const volBtn = document.getElementById("volunteerButton");
   const notifWrap = document.getElementById("notifWrap");
   if (logoutBtn) logoutBtn.style.display = "none";
-  if (volBtn) volBtn.style.display = "none";
   if (notifWrap) notifWrap.style.display = "none";
   const dd = document.getElementById("notifDropdown");
   if (dd) dd.hidden = true;
@@ -593,8 +617,6 @@ function loadDashboard() {
 
   const logoutBtn = document.getElementById("logoutBtn");
   if (logoutBtn) logoutBtn.style.display = "inline-block";
-  const volBtn = document.getElementById("volunteerButton");
-  if (volBtn) volBtn.style.display = "inline-flex";
   const notifWrap = document.getElementById("notifWrap");
   if (notifWrap) notifWrap.style.display = "inline-block";
 
